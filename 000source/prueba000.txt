@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello world</title>
+    <h1>Hola xdxdxd</h1>
+  </head>
+
+  <body>
+    <script>
+        import OpenAI from "openai";
+        const client = new OpenAI();
+
+        const response = await client.responses.create({
+            model: "gpt-4.1",
+            input: "Write a one-sentence bedtime story about a unicorn.",
+            });
+        
+        document.write(response.output_text);
+        console.log(response.output_text);
+        //-----------------------------------------
+
+        function sumar(a,b){
+            return a+b;
+        }
+
+        let lista = [1,2,3,4,5];
+
+        for(elemento of lista){
+            let xd = elemento;
+            document.write(elemento);
+        }
+
+        for(elemento of lista){
+            let suma = sumar(elemento,5);
+            document.write(suma);
+        }
+        console.log("Si esto está en la consola es porque todo salió bien");
+     </script>
+  </body>
+</html>
